@@ -5,10 +5,27 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`),
+  alternates: {
+    canonical: '/',
+  },
   title: "Klasse B kontrollspørsmål quiz - B-Lappen",
   description: "Orker ikke å lese boka? Test deg selv her med kontrollspørsmål til klasse B førerkort!",
-    openGraph: {
-    images: '/og-image.png',
+  keywords: ["klasse B", "kontrollspørsmål", "quiz", "førerkort", "trening", "kjøretillatelse", "trafikkregler", "kjøreopplæring", "kjøretøy", "eksamen", "teoriprøve", "bilfører", "sikkerhet", "førerlisens", "trafikkskole", "bilopplæring"],
+  authors: [{ name: 'B-Lappen', url: process.env.NEXT_PUBLIC_BASE_URL }],
+  openGraph: {
+    type: 'website',
+    locale: 'no_NO',
+    siteName: 'B-Lappen',
+    url: process.env.NEXT_PUBLIC_BASE_URL,
+    title: 'Klasse B kontrollspørsmål quiz - B-Lappen',
+    description: 'Orker ikke å lese boka? Test deg selv her med kontrollspørsmål til klasse B førerkort!',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Klasse B kontrollspørsmål quiz - B-Lappen',
+    description: 'Orker ikke å lese boka? Test deg selv her med kontrollspørsmål til klasse B førerkort!',
+    site: process.env.NEXT_PUBLIC_BASE_URL,
   },
 };
 
