@@ -16,6 +16,7 @@ const StartScreen = ({ onStartClick }: { onStartClick: () => void }) => {
         width={200}
         height={200}
         className="rounded my-3"
+        priority={true}
       />
       <h1 className="text-4xl font-bold mb-6">
         Velkommen til klasse B kontrollspørsmål quiz!
