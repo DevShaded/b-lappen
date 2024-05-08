@@ -78,20 +78,18 @@ const Question = ({
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {options.map((option, index) => (
-            <div
+            <button
               key={index}
+              onClick={() => handleOptionClick(option)}
+              disabled={showFeedback}
               className="relative flex md:items-center space-x-3 rounded-lg bg-blue-600 px-6 py-5 shadow-sm focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400"
             >
               <div className="min-w-0 w-full flex-1">
-                <Button
-                  key={index}
-                  onClick={() => handleOptionClick(option)}
-                  disabled={showFeedback}
-                >
+                <div className="text-gray-100 text-center font-bold">
                   {option}
-                </Button>
+                </div>
               </div>
-            </div>
+            </button>
           ))}
         </div>
         {showFeedback && (
