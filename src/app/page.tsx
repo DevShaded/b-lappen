@@ -6,6 +6,7 @@ import { getQuestions } from "@/lib/utils";
 import { useState } from "react";
 import Image from "next/image";
 import Logo from "@/images/logo.webp";
+import clsx from "clsx";
 
 const StartScreen = ({onStartClick}: { onStartClick: () => void }) => {
   return (
@@ -68,40 +69,49 @@ const Question = ({
 
   return (
     <div className="max-w-7xl mx-auto px-5 my-2">
-      <div className="flex flex-col h-screen justify-center sm:items-center">
-        <h1 className="text-2xl font-bold mt-6 mb-4 sm:text-center">
-          {question}
-        </h1>
+      <div className="flex flex-col sm:h-screen justify-center">
+        <header className="mb-6 sm:text-center">
+          <h1 className="text-2xl font-bold mt-6 mb-4 sm:text-center md:text-4xl">
+            {question}
+          </h1>
 
-        <p className="pb-5 text-sm text-gray-200 font-medium">
-          Kategori: {category}
-        </p>
+          <p className="pb-5 text-gray-200 font-medium md:text-xl">
+            Kategori: {category}
+          </p>
+        </header>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 space-6 md:grid-cols-2">
           {options.map((option, index) => (
             <button
               key={index}
               onClick={() => handleOptionClick(option)}
               disabled={showFeedback}
-              className="relative flex md:items-center space-x-3 rounded-lg bg-blue-600 px-6 py-5 shadow-sm focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400"
+              className={clsx(
+                'col-span-2 md:items-center space-x-3 rounded-lg px-6 py-5 shadow-sm focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400',
+                selectedOption === option && correctAnswer === option ? 'bg-green-500' : '',
+                selectedOption === option && correctAnswer !== option ? 'bg-red-500' : '',
+                showFeedback ? 'disabled:opacity-50' : '',
+                'bg-gray-800'
+              )}
             >
-              <div className="min-w-0 w-full flex-1">
-                <div className="text-gray-100 text-center font-bold">
-                  {option}
-                </div>
+              <div className="text-white text-center font-medium">
+                {option}
               </div>
             </button>
           ))}
+
         </div>
         {showFeedback && (
-          <>
+          <div className="mb-16">
             <FeedbackCard
               selectedOption={selectedOption}
               correctAnswer={correctAnswer}
               handleNextClick={handleNextClick}
             />
-            <Button onClick={handleNextClick}>Neste spørsmål</Button>
-          </>
+            <div className="flex justify-end">
+              <Button onClick={handleNextClick}>Neste spørsmål</Button>
+            </div>
+          </div>
         )}
       </div>
     </div>
