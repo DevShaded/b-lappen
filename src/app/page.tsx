@@ -7,7 +7,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Logo from "@/images/logo.webp";
 
-const StartScreen = ({ onStartClick }: { onStartClick: () => void }) => {
+const StartScreen = ({onStartClick}: { onStartClick: () => void }) => {
   return (
     <div className="flex flex-col sm:items-center justify-center h-screen px-5 sm:text-center">
       <Image
@@ -30,7 +30,7 @@ const StartScreen = ({ onStartClick }: { onStartClick: () => void }) => {
   );
 };
 
-const EndScreen = ({ onRestartClick }: { onRestartClick: () => void }) => {
+const EndScreen = ({onRestartClick}: { onRestartClick: () => void }) => {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <h1 className="text-4xl font-bold mb-6">Takk for at du spilte!</h1>
@@ -126,7 +126,7 @@ export default function Home() {
   return (
     <div>
       {!gameStarted ? (
-        <StartScreen onStartClick={handleStartClick} />
+        <StartScreen onStartClick={handleStartClick}/>
       ) : currentQuestionIndex < questions.length ? (
         <Question
           category={questions[currentQuestionIndex].category}
@@ -136,7 +136,7 @@ export default function Home() {
           handleNextQuestion={handleOptionClick}
         />
       ) : (
-        <EndScreen onRestartClick={() => window.location.reload()} />
+        <EndScreen onRestartClick={() => window.location.reload()}/>
       )}
     </div>
   );
