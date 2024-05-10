@@ -365,7 +365,10 @@ export function getQuestions() {
             category: "Styring",
             question: "Hva kan være årsaken til at bilen trekker til en av sidene?",
             options: [
-                "Det kan være feil lufttrykk i ett av forhjulene, eller feil i forstillingen til bilen."
+                "Det kan være feil lufttrykk i ett av forhjulene, eller feil i forstillingen til bilen.",
+                "Feil kalibrering av ESP-systemet.",
+                "Manglende balansering av hjulene kan føre til ujevn styring.",
+                "Slitasje på hjulopphenget kan forårsake ujevn styring."
             ],
             correctAnswer: "Det kan være feil lufttrykk i ett av forhjulene, eller feil i forstillingen til bilen."
         },
@@ -373,26 +376,10 @@ export function getQuestions() {
             category: "Annet",
             question: "Hvor slår man på resirkulasjon (omluft)?",
             options: [
-                "Påvis knappen."
-            ],
-            correctAnswer: "Påvis knappen."
-        },
-        {
-            category: "Annet",
-            question: "I hvilke situasjoner er omluft en fordel?",
-            options: [
-                "Den kan brukes hvis du kjører i tunell med mye forurensning eller bak en bil med mye eksos for å unngå å få eksos inn i bilen.",
-                "Er det kaldt ute kan den også brukes de første minuttene for å få kupeen på bilen raskere varm.",
-                "Husk å slå av systemet igjen så bilen ikke resirkulerer samme luften om igjen og om igjen, da kan det bli veldig tung og dårlig luft inne i bilen.",
-                "Ved fuktig luft i bilen kan du også risikere at det raskt blir dugg på rutene om du ikke slår av knappen."
-            ],
-            correctAnswer: "Den kan brukes hvis du kjører i tunell med mye forurensning eller bak en bil med mye eksos for å unngå å få eksos inn i bilen."
-        },
-        {
-            category: "Annet",
-            question: "Hvor slår man på resirkulasjon (omluft)?",
-            options: [
-                "Påvis knappen."
+                "Påvis knappen.",
+                "Resirkulasjonsknappen finnes vanligvis på dashbordet.",
+                "Du kan finne resirkulasjonsknappen nær kontrollene for klimaanlegget.",
+                "Resirkulasjonsfunksjonen kan også aktiveres via stemmestyringssystemet."
             ],
             correctAnswer: "Påvis knappen."
         },
@@ -417,17 +404,6 @@ export function getQuestions() {
                 "Ingen av de ovennevnte"
             ],
             correctAnswer: "Defroster på frontrute, temperatur opp! Sett på varmetråder i bakrute og på speil."
-        },
-        {
-            category: "Annet",
-            question: "Hvor slår man på resirkulasjon (omluft)?",
-            options: [
-                "Påvis knappen.",
-                "I fanereguleringen",
-                "Under rattet",
-                "Ingen av de ovennevnte"
-            ],
-            correctAnswer: "Påvis knappen."
         },
         {
             category: "Annet",
