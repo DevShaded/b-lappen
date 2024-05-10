@@ -390,25 +390,6 @@ export function getQuestions() {
         },
         {
             category: "Annet",
-            question: "Hvor slår man på resirkulasjon (omluft)?",
-            options: [
-                "Påvis knappen."
-            ],
-            correctAnswer: "Påvis knappen."
-        },
-        {
-            category: "Annet",
-            question: "I hvilke situasjoner er omluft en fordel?",
-            options: [
-                "Den kan brukes hvis du kjører i tunell med mye forurensning eller bak en bil med mye eksos for å unngå å få eksos inn i bilen.",
-                "Er det kaldt ute kan den også brukes de første minuttene for å få kupeen på bilen raskere varm.",
-                "Husk å slå av systemet igjen så bilen ikke resirkulerer samme luften om igjen og om igjen, da kan det bli veldig tung og dårlig luft inne i bilen.",
-                "Ved fuktig luft i bilen kan du også risikere at det raskt blir dugg på rutene om du ikke slår av knappen."
-            ],
-            correctAnswer: "Den kan brukes hvis du kjører i tunell med mye forurensning eller bak en bil med mye eksos for å unngå å få eksos inn i bilen."
-        },
-        {
-            category: "Annet",
             question: "Still inn varmeapparat slik at is og dugg på frontruten fjernes effektivt",
             options: [
                 "Defroster på frontrute, temperatur opp! Sett på varmetråder i bakrute og på speil.",
@@ -417,17 +398,6 @@ export function getQuestions() {
                 "Ingen av de ovennevnte"
             ],
             correctAnswer: "Defroster på frontrute, temperatur opp! Sett på varmetråder i bakrute og på speil."
-        },
-        {
-            category: "Annet",
-            question: "Hvor slår man på resirkulasjon (omluft)?",
-            options: [
-                "Påvis knappen.",
-                "I fanereguleringen",
-                "Under rattet",
-                "Ingen av de ovennevnte"
-            ],
-            correctAnswer: "Påvis knappen."
         },
         {
             category: "Annet",
