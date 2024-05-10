@@ -365,7 +365,10 @@ export function getQuestions() {
             category: "Styring",
             question: "Hva kan være årsaken til at bilen trekker til en av sidene?",
             options: [
-                "Det kan være feil lufttrykk i ett av forhjulene, eller feil i forstillingen til bilen."
+                "Det kan være feil lufttrykk i ett av forhjulene, eller feil i forstillingen til bilen.",
+                "Feil kalibrering av ESP-systemet.",
+                "Manglende balansering av hjulene kan føre til ujevn styring.",
+                "Slitasje på hjulopphenget kan forårsake ujevn styring."
             ],
             correctAnswer: "Det kan være feil lufttrykk i ett av forhjulene, eller feil i forstillingen til bilen."
         },
@@ -373,7 +376,10 @@ export function getQuestions() {
             category: "Annet",
             question: "Hvor slår man på resirkulasjon (omluft)?",
             options: [
-                "Påvis knappen."
+                "Påvis knappen.",
+                "Resirkulasjonsknappen finnes vanligvis på dashbordet.",
+                "Du kan finne resirkulasjonsknappen nær kontrollene for klimaanlegget.",
+                "Resirkulasjonsfunksjonen kan også aktiveres via stemmestyringssystemet."
             ],
             correctAnswer: "Påvis knappen."
         },
