@@ -3,7 +3,7 @@
 import Button from "@/components/Button";
 import FeedbackCard from "@/components/FeedbackCard";
 import { getQuestions } from "@/lib/utils";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Logo from "@/images/logo.webp";
 import clsx from "clsx";
@@ -55,6 +55,7 @@ const Question = ({
 }) => {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
+  const [shuffledOptions, setShuffledOptions] = useState<string[]>([]);
 
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
@@ -66,6 +67,10 @@ const Question = ({
     setShowFeedback(false);
     handleNextQuestion();
   };
+
+  useEffect(() => {
+    setShuffledOptions(options.sort(() => Math.random() - 0.5));
+  }, [options, question]);
 
   return (
     <div className="max-w-7xl mx-auto px-5 my-2">
@@ -81,7 +86,7 @@ const Question = ({
         </header>
 
         <div className="grid grid-cols-1 gap-6 space-6 md:grid-cols-2">
-          {options.map((option, index) => (
+          {shuffledOptions.map((option, index) => (
             <button
               key={index}
               onClick={() => handleOptionClick(option)}
