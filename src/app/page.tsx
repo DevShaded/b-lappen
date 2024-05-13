@@ -95,7 +95,7 @@ const Question = ({
                 'col-span-2 md:items-center space-x-3 rounded-lg px-6 py-5 shadow-sm focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400',
                 selectedOption === option && correctAnswer === option ? 'bg-green-500' : '',
                 selectedOption === option && correctAnswer !== option ? 'bg-red-500' : '',
-                showFeedback ? 'disabled' : '',
+                showFeedback && selectedOption === option && correctAnswer === option ? 'disabled' : 'disabled:opacity-50',
                 'bg-gray-800'
               )}
             >
