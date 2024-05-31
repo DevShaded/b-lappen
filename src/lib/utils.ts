@@ -136,7 +136,7 @@ export function getQuestions() {
       question:
         "Kontrollere om varselslampen for to-krets bremsesystemet/driftbrems virker.",
       options: [
-        "Identifisere varselampen (!) samme lampe som park-brems/håndbrekk, få den til å lyse, og få den til å slukke. Start motor, ta ev og på håndbrekket.",
+        "Identifisere varselampen (!) samme lampe som park-brems/håndbrekk, få den til å lyse, og få den til å slukke. Start motor, ta av og på håndbrekket.",
         "Slå av og på blinklysene.",
         "Bytt ut lyspærene i frontlyktene.",
         "Ingen av de ovennevnte.",
